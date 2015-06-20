@@ -1,4 +1,5 @@
 ActiveAdmin.register Patient do
+  permit_params :mrn, :family_name, :given_name, :dob, :sex, :photo_file_name, :photo_content_type, :photo_file_size, :photo_updated_at
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
