@@ -1,6 +1,5 @@
-<h1>Editing patient_summary</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @patient_summary %> |
-<%= link_to 'Back', patient_summaries_path %>
+<%- model_class = PatientSummary -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => PatientSummary %></h1>
+</div>
+<%= render :partial => 'form' %>
