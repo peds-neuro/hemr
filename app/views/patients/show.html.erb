@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mrn:</strong>
+  <%= @patient.mrn %>
+</p>
+
+<p>
+  <strong>Family name:</strong>
+  <%= @patient.family_name %>
+</p>
+
+<p>
+  <strong>Given name:</strong>
+  <%= @patient.given_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @patient.dob %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @patient.sex %>
+</p>
+
+<p>
+  <strong>Photo file name:</strong>
+  <%= @patient.photo_file_name %>
+</p>
+
+<p>
+  <strong>Photo content type:</strong>
+  <%= @patient.photo_content_type %>
+</p>
+
+<p>
+  <strong>Photo file size:</strong>
+  <%= @patient.photo_file_size %>
+</p>
+
+<p>
+  <strong>Photo updated at:</strong>
+  <%= @patient.photo_updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
