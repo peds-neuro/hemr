@@ -1,0 +1,23 @@
+<h1>Listing patient_summaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patient_summaries.each do |patient_summary| %>
+      <tr>
+        <td><%= link_to 'Show', patient_summary %></td>
+        <td><%= link_to 'Edit', edit_patient_summary_path(patient_summary) %></td>
+        <td><%= link_to 'Destroy', patient_summary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Patient summary', new_patient_summary_path %>

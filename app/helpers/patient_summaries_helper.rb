@@ -1,0 +1,2 @@
+module PatientSummariesHelper
+end

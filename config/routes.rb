@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :patient_summaries
+
   resources :patients do
   #->Prelang (voting/acts_as_votable)
   member do
