@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :documents
+
   resources :user_preferences
 
   resources :patient_summaries

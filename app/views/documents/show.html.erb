@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @document.patient %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @document.user %>
+</p>
+
+<p>
+  <strong>Source author:</strong>
+  <%= @document.source_author %>
+</p>
+
+<p>
+  <strong>Source institution:</strong>
+  <%= @document.source_institution %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @document.department %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @document.type %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @document.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @document.body %>
+</p>
+
+<p>
+  <strong>Structured data:</strong>
+  <%= @document.structured_data %>
+</p>
+
+<p>
+  <strong>Default view:</strong>
+  <%= @document.default_view %>
+</p>
+
+<p>
+  <strong>Source file filename:</strong>
+  <%= @document.source_file_filename %>
+</p>
+
+<p>
+  <strong>Source file content type:</strong>
+  <%= @document.source_file_content_type %>
+</p>
+
+<p>
+  <strong>Source file file size:</strong>
+  <%= @document.source_file_file_size %>
+</p>
+
+<p>
+  <strong>Source file updated at:</strong>
+  <%= @document.source_file_updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>

@@ -1,0 +1,24 @@
+<%= simple_form_for(@document) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :patient %>
+    <%= f.association :user %>
+    <%= f.input :source_author %>
+    <%= f.input :source_institution %>
+    <%= f.input :department %>
+    <%= f.input :type %>
+    <%= f.input :title %>
+    <%= f.input :body %>
+    <%= f.input :structured_data %>
+    <%= f.input :default_view %>
+    <%= f.input :source_file_filename %>
+    <%= f.input :source_file_content_type %>
+    <%= f.input :source_file_file_size %>
+    <%= f.input :source_file_updated_at %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
