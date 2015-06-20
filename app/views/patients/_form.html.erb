@@ -1,19 +1,64 @@
-<%= simple_form_for(@patient) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :mrn %>
-    <%= f.input :family_name %>
-    <%= f.input :given_name %>
-    <%= f.input :dob %>
-    <%= f.input :sex %>
-    <%= f.input :photo_file_name %>
-    <%= f.input :photo_content_type %>
-    <%= f.input :photo_file_size %>
-    <%= f.input :photo_updated_at %>
+<%= form_for @patient, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :mrn, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :mrn, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :family_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :family_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :given_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :given_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dob, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.date_select :dob, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sex, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :sex, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :photo_file_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :photo_file_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :photo_content_type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :photo_content_type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :photo_file_size, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :photo_file_size, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :photo_updated_at, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :photo_updated_at, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  patients_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
