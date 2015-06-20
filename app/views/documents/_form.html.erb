@@ -1,24 +1,82 @@
-<%= simple_form_for(@document) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.association :patient %>
-    <%= f.association :user %>
-    <%= f.input :source_author %>
-    <%= f.input :source_institution %>
-    <%= f.input :department %>
-    <%= f.input :type %>
-    <%= f.input :title %>
-    <%= f.input :body %>
-    <%= f.input :structured_data %>
-    <%= f.input :default_view %>
-    <%= f.input :source_file_filename %>
-    <%= f.input :source_file_content_type %>
-    <%= f.input :source_file_file_size %>
-    <%= f.input :source_file_updated_at %>
+<%= form_for @document, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :source_author, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :source_author, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :source_institution, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :source_institution, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :department, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :department, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :body, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :body, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :structured_data, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :structured_data, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :default_view, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :default_view, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :source_file_filename, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :source_file_filename, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :source_file_content_type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :source_file_content_type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :source_file_file_size, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :source_file_file_size, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :source_file_updated_at, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.datetime_select :source_file_updated_at, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  documents_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
